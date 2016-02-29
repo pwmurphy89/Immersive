@@ -2,25 +2,50 @@
 <html>
 <head>
 	<title>Unit 1-Day 1- Image Gallery in HTML</title>
+	<style type="text/css" media="screen">
+		body {
+			background-color: #222;
+			color: #ddd;
+			margin-top: 20px;
+		}
+
+		.thumbnails img {
+			height: 80px;
+			border: 4px solid #555;
+			margin: 0 10px 10px 0;
+
+		}
+		.thumbnails img:hover {
+			border: 4px solid #0cf;
+			cursor: pointer;
+		}
+		.gallery .preview {
+			text-align: center;
+		}
+
+	</style>
 </head>
 <body>
 
 <!-- Create a wrapper div. Everything on the page will be inside of this.  -->
 	<div class="gallery">
-		<!-- Put a header on top of the gallery with info about project -->
+		<!-- Put a header on top of the gallery wo about project -->
 		<h2>Unit 1 - Day 1 - My First Project</h2>
 		<!-- Let's make a  new line wiht a br tag -->
 		<br />
-
+ <!-- The images in our thumbnail section -->
 		<div class="thumbnails">
-		<img src="images/image1.jpg" name="img1">
-		<img src="images/image2.jpg" name="img2">
-		<img src="images/image3.jpg" name="img3">
-		<img src="images/image4.jpg" name="img4">
-		<img src="images/image5.jpg" name="img5">
+		<img src="images/image1.jpg" name="img1" onmouseover="preview.src=img1.src">
+		<img src="images/image2.jpg" name="img2" onmouseover="preview.src=img2.src">
+		<img src="images/image3.jpg" name="img3" onmouseover="preview.src=img3.src">
+		<img src="images/image4.jpg" name="img4" onmouseover="preview.src=img4.src">
+		<img src="images/image5.jpg" name="img5" onmouseover="preview.src=img5.src">
 			
 		</div>
 
+<!-- The preview window for thumbnails -->
+	<div class="preview">
+		<img name="preview" src="images/image1.jpg">
 	</div>
 
 </body>
